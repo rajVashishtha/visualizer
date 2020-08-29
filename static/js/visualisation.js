@@ -1,10 +1,10 @@
 var speed=1000;
-var inp_aspeed = $("#sorting_speed");
-inp_aspeed.on("change",vis_speed)
+var sorting_speed = $("#sorting_speed");
+sorting_speed.on("change",vis_speed)
 
 function vis_speed()
 {
-    var array_speed=inp_aspeed.val();
+    var array_speed=sorting_speed.val();
     switch(parseInt(array_speed))
     {
         case 1: speed=1;

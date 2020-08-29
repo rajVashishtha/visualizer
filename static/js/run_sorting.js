@@ -1,7 +1,7 @@
 const runSorting = ()=>{
     disableButtons()
     if (selected_algo === "merge"){
-        Merge()
+        mergeSort()
         return
     }
     else if(selected_algo === "bubble"){
