@@ -17,6 +17,10 @@ function vis_speed()
                 break;
         case 5: speed=10000;
                 break;
+        case 6: speed = 100000;
+                break;
+        case 7:speed = 1000000;
+                break;
     }
     
     delay_time=10000/(Math.floor(array_size/10)*speed);        
