@@ -1,4 +1,4 @@
-var speed=1000;
+var speed=100;
 var sorting_speed = $("#sorting_speed");
 sorting_speed.on("change",vis_speed)
 
@@ -7,7 +7,7 @@ function vis_speed()
     var array_speed=sorting_speed.val();
     switch(parseInt(array_speed))
     {
-        case 1: speed=1;
+        case 1: speed=5;
                 break;
         case 2: speed=10;
                 break;

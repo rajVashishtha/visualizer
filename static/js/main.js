@@ -23,9 +23,9 @@ generateArray();
 $("#array_size").on("change",changeArray)
 $("#reset_array").on("click",resetArray)
 $(".sorting_buttons button").on("click",(e)=>{
-    const button_text = e.target.innerHTML.toLowerCase()
-    selected_algo = button_text
-    alert("selected -->"+selected_algo)
+    const button_text = e.target.innerHTML
+    $("#selected_algorithm").text(button_text)
+    selected_algo = button_text.toLowerCase()
 })
 $("#start_sorting").on("click",runSorting)
 $("#stop_sorting").on("click",()=>{

@@ -15,6 +15,7 @@ const generateArray = ()=>{
 }
 
 const changeArray = ()=>{
+    array_size = $("#array_size").val()
     generateArray()
 }
 const resetArray = ()=>{
