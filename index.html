@@ -4,13 +4,156 @@
         <title>
             My Visualizer
         </title>
-        <link href="./css/main.css" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="extras/jquery.range.js" type="text/javascript"></script>
-        <link href="./extras/jquery.range.css" rel="stylesheet" />
     </head>
+    <style>
+        html, body {
+            margin: 0;
+            }
+            .color_body{
+                top: 5px;
+                left: 05px;
+            width: 100vw;
+            height: 100vh;
+            background-color: #eeeeee;
+            position: fixed;
+            z-index: -10;
+            }
+            .color_body:after {
+            content: ' ';
+            border-top: 100vh solid #53AAFc;
+            border-left: 100vw solid transparent;
+            width: 0;
+            position: absolute;
+            }
+            .main_body{
+                width: 100%;
+            }
+            .main_body h1{
+                text-align: center;
+                padding-top: 10px;
+                color: white;
+                letter-spacing: 6px;
+                line-height: 5px;
+            }
+            .main_body h4{
+                margin-left: 150px;
+                text-align: center;
+                color: white;
+                letter-spacing: 5px;
+            }
+            .features_box{
+                float: right;
+                color: white;
+                width: 30vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            .single_feature{
+                
+            }
+            .features{
+                padding-left: 50px;
+            }
+            li{
+                padding: 5px 5px;
+                font-size: 20px;
+            }
+            .buttons_box{
+                padding-top: 150px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40vw;
+            }
+            .button{
+                width: 300px;
+                text-align: center;
+                font-size: 30px;
+                border : 1px solid #53AAFc;
+                color:#53AAFc;
+                background-color: transparent;
+                letter-spacing: 2px;
+                cursor: pointer;
+                border-radius: 100px 30px 100px 30px;
+                outline: none;
+                text-shadow:
+                    0px 10px 10px #53AAFc;
+            }
+            .button p{
+                margin-top: 20px;
+                transform: rotate(-3deg);
+            }
+
+            .button:hover {
+                animation: .8s morph ease infinite;
+            }
+
+            .button:hover p {
+                animation: .8s rot ease infinite;
+            }
+            
+        @keyframes morph {
+            0% {
+                border-radius: 100px 30px 100px 30px;
+            } 50% {
+                border-radius: 30px 100px 30px 100px;
+            } 100% {
+                border-radius: 100px 30px 100px 30px;
+            }
+        }
+
+        @keyframes rot {
+            0% {
+                transform: rotate(-3deg);
+            } 50% {
+                transform: rotate(3deg);
+            } 100% {
+                transform: rotate(-3deg);
+            }
+        }
+    </style>
     <body>
-        
+        <div class="color_body">
+        </div>
+        <div class="main_body">
+            <h1>VISUALIZER</h1>
+            <h4 >- Raj Vashihst</h4>
+            <div class="features_box">
+                <div class="single_feature">
+                    <h3 style="line-height: 1px; letter-spacing: 4px;">Sorting - </h3>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                Merge Sort
+                            </li>
+                            <li>Quick Sort</li>
+                            <li>Heap Sort</li>
+                            <li>Bubble Sort</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single_feature">
+                    <h3 style="line-height: 1px; letter-spacing: 4px;">Searching - </h3>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                Simple Search
+                            </li>
+                            <li>Binary Search</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons_box">
+                <button class="button" id="sort_page"><p>Sorting</p></button>
+                <button class="button" style="margin-top: 30px;" id="search_page"><p>Searching</p></button>
+            </div>
+        </div>
+        <script>
+            $("#sort_page").on("click",()=>{window.location.href = "../sort"})
+        </script>
         
     </body>
 </html>
