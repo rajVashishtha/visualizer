@@ -11,6 +11,9 @@ app.get("/",(req,res)=>{
 app.get("/sort",(req,res)=>{
     res.sendFile("index_sort.html",{root: __dirname})
 })
+app.get("/search",(req,res)=>{
+    res.sendFile("index_search.html",{root: __dirname})
+})
 app.listen(PORT,()=>{
     console.log("running")
 })

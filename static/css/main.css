@@ -31,7 +31,7 @@
     padding-top: 20px;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     justify-content: space-around;
 }
 .navbar .action_buttons button{
