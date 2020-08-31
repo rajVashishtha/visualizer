@@ -4,16 +4,12 @@ const runSearching = ()=>{
         simpleSearch()
         return
     }
-    else if(selected_algo === "bubble"){
-        bubbleSort()
-        return
-    }
-    else if(selected_algo === "quick"){
-        quickSort()
-        return
-    }
     else{
-        heapSort()
+        for(var i = 0;i<array_size;i++){
+            non_random[i] = i+1
+        }
+        generateArray()
+        binarySearch(0,parseInt(array_size)-1)
         return
     }
 }

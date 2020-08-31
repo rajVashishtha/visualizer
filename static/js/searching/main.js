@@ -32,6 +32,11 @@ $("#reset_array").on("click",()=>{
     non_random = realArray(1,parseInt(array_size))
     shuffleArray(non_random)
     generateArray()
+});
+$(".sorting_buttons button").on("click",(e)=>{
+    const button_text = e.target.innerHTML
+    $("#selected_algorithm").text(button_text)
+    selected_algo = button_text.toLowerCase()
 })
 $("#start_searching").on("click",runSearching)
 $("#stop_searching").on("click",()=>{
