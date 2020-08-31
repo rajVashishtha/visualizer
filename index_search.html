@@ -27,15 +27,18 @@
                 </div>
                 <div class="slider_div">
                     <span style="margin-bottom: 15px; display: inline-block;">Select Searching Speed</span>
-                    <input type="hidden" id="searching_speed" value="4" />
+                    <input type="hidden" id="searching_speed" value="3" />
                 </div>
-                <button class="disabled_button" disabled id="stop_sorting">
+                <button class="disabled_button" disabled id="stop_searching">
                     Stop
                 </button>
                 <button id="start_searching">
                     Start
                 </button>
-                <span>Selected Algo : <b id="searching_algorithm"> Simple</b></span>
+                <div style="display: flex; flex-direction: column;">
+                    <span>Selected Algo : <b id="searching_algorithm"> Simple</b></span>
+                    <input type="number" placeholder="Enter number to search" id="ele_to_search" value="1" min="1" class="input_field"/>
+                </div>
             </div>
         </div>
         <div class="main_body_searching">
@@ -47,5 +50,9 @@
         
     </body>
     <script src="js/searching/generate_array.js" type="text/javascript"></script>
+    <script src="js/searching/visualisation.js" type="text/javascript"></script>
+    <script src="js/searching/enable_disable_buttons.js" type="text/javascript"></script>
+    <script src="js/searching/run_searching.js" type="text/javascript"></script>
     <script src="js/searching/main.js" type="text/javascript"></script>
+    <script src="js/searching/searching_algos/simple_search.js" type="text/javascript"></script>
 </html>

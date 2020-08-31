@@ -1,3 +1,14 @@
 .main_body_searching{
     padding-top: 150px;
 }
+.input_field{
+    margin-top: 5px;
+    height: 30px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ababab;
+}
+.input_field:focus{
+    border-bottom: 2px solid #53AAFc;
+}

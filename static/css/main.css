@@ -33,6 +33,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    align-items: center;
 }
 .navbar .action_buttons button{
     padding: 5px 20px;

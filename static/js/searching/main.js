@@ -19,10 +19,22 @@ $("#searching_speed").jRange({
     showLabels: true,
     snap: true
 })
+var selected_algo = "simple"
 generateArray()
 $("#array_size").on("change",()=>{
     array_size = $("#array_size").val()
     non_random = realArray(1,parseInt(array_size))
     shuffleArray(non_random)
     generateArray()
+})
+$("#reset_array").on("click",()=>{
+    array_size = $("#array_size").val()
+    non_random = realArray(1,parseInt(array_size))
+    shuffleArray(non_random)
+    generateArray()
+})
+$("#start_searching").on("click",runSearching)
+$("#stop_searching").on("click",()=>{
+    generateArray()
+    enableButtons()
 })
