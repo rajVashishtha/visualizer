@@ -26,6 +26,9 @@ $(".sorting_buttons button").on("click",(e)=>{
     const button_text = e.target.innerHTML
     $("#selected_algorithm").text(button_text)
     selected_algo = button_text.toLowerCase()
+    $("#bubble_sort_info, #merge_sort_info, #quick_sort_info, #heap_sort_info").css('display','none')
+    console.log("#"+selected_algo+"_sort_info")
+    $("#"+selected_algo+"_sort_info").css('display','block')
 })
 $("#start_sorting").on("click",runSorting)
 $("#stop_sorting").on("click",()=>{

@@ -34,6 +34,7 @@ $("#reset_array").on("click",()=>{
     generateArray()
 });
 $(".sorting_buttons button").on("click",(e)=>{
+    console.log("working")
     const button_text = e.target.innerHTML
     $("#selected_algorithm").text(button_text)
     selected_algo = button_text.toLowerCase()

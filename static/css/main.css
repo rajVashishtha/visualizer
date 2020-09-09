@@ -69,3 +69,24 @@
     border-color: #888888;
     cursor: not-allowed;
 }
+code{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+}
+code pre{
+    padding: 10px 30px;
+    padding-right: 350px;
+    background-color: #efefef;
+}
+.k{
+    font-weight: bold;
+}
+#merge_sort_info{
+    display: block;
+}
+#bubble_sort_info, #quick_sort_info, #heap_sort_info{
+    display: none;
+}

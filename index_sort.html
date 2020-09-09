@@ -4,6 +4,7 @@
         <title>
             My Visualizer
         </title>
+        <link href="./css/table.css" rel="stylesheet" />
         <link href="./css/main.css" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="extras/jquery.range.js" type="text/javascript"></script>
@@ -43,6 +44,275 @@
            <div class="array_container" id="array_container">
 
            </div>
+        </div>
+        <hr style="margin-top: 20px;" />
+        <div class="info_div">
+        <div id="merge_sort_info">
+            <h2>Basic Information - </h2>
+            <div class="main_info_div">
+                <h3>Time Complexities - </h3>
+                <div class="container">
+	
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                        </div>
+                        <div class="table-content">	
+                            <div class="table-row">		
+                                <div class="table-data">Best</div>
+                                <div class="table-data">O(nlogn)</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Average</div>
+                                <div class="table-data">O(nlogn)</div>
+
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Worst</div>
+                                <div class="table-data">O(nlogn)</div>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <h3>Algorithm - </h3>
+                <code>
+                    <pre>
+procedure mergesort( var a as array )
+   if ( n == 1 ) return a
+
+   var l1 as array = a[0] ... a[n/2]
+   var l2 as array = a[n/2+1] ... a[n]
+
+   l1 = mergesort( l1 )
+   l2 = mergesort( l2 )
+
+   return merge( l1, l2 )
+end procedure
+
+procedure merge( var a as array, var b as array )
+
+   var c as array
+   while ( a and b have elements )
+      if ( a[0] > b[0] )
+         add b[0] to the end of c
+         remove b[0] from b
+      else
+         add a[0] to the end of c
+         remove a[0] from a
+      end if
+   end while
+   
+   while ( a has elements )
+      add a[0] to the end of c
+      remove a[0] from a
+   end while
+   
+   while ( b has elements )
+      add b[0] to the end of c
+      remove b[0] from b
+   end while
+   
+   return c
+	
+end procedure
+                    </pre>
+                </code>
+
+            </div>
+
+        </div>
+
+        <!-- For Quick sort -->
+
+        <div id="quick_sort_info">
+            <h2>Basic Information - </h2>
+            <div class="main_info_div">
+                <h3>Time Complexities - </h3>
+                <div class="container">
+	
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                        </div>
+                        <div class="table-content">	
+                            <div class="table-row">		
+                                <div class="table-data">Best</div>
+                                <div class="table-data">O(nlogn)</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Average</div>
+                                <div class="table-data">O(nlogn)</div>
+
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Worst</div>
+                                <div class="table-data">O(n^2)</div>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <h3>Algorithm - </h3>
+                <code>
+                    <pre>
+                    <b>algorithm</b> quicksort(A, lo, hi) <b>is</b>
+                        <b>if</b> lo &lt; hi <b>then</b>
+                            p&nbsp;:= partition(A, lo, hi)
+                            quicksort(A, lo, p - 1)
+                            quicksort(A, p + 1, hi)
+                    
+                    <b>algorithm</b> partition(A, lo, hi) <b>is</b>
+                        pivot&nbsp;:= A[hi]
+                        i&nbsp;:= lo
+                        <b>for</b> j&nbsp;:= lo <b>to</b> hi <b>do</b>
+                            <b>if</b> A[j] &lt; pivot <b>then</b>
+                                swap A[i] with A[j]
+                                i&nbsp;:= i + 1
+                        swap A[i] with A[hi]
+                        <b>return</b> i
+                    </pre>
+                </code>
+
+            </div>
+
+        </div>
+
+        <!-- For heap sort -->
+
+        <div id="heap_sort_info">
+            <h2>Basic Information - </h2>
+            <div class="main_info_div">
+                <h3>Time Complexities - </h3>
+                <div class="container">
+	
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                        </div>
+                        <div class="table-content">	
+                            <div class="table-row">		
+                                <div class="table-data">Best</div>
+                                <div class="table-data">O(n)</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Average</div>
+                                <div class="table-data">O(nlogn)</div>
+
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Worst</div>
+                                <div class="table-data">O(nlogn)</div>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <h3>Algorithm - </h3>
+                <code>
+                    <pre>
+                        <b>procedure</b> heapsort(a, count) <b>is</b>
+                        <b>input:</b> an unordered array <i>a</i> of length <i>count</i>
+                     
+                        <i>(Build the heap in array a so that largest value is at the root)</i>
+                        heapify(a, count)
+                    
+                        <i>(The following loop maintains the <b>invariants</b> that a[0:end] is a heap and every element</i>
+                         <i>beyond end is greater than everything before it (so a[end:count] is in sorted order))</i>
+                        end ← count - 1
+                        <b>while</b> end &gt; 0 <b>do</b>
+                            <i>(a[0] is the root and largest value. The swap moves it in front of the sorted elements.)</i>
+                            swap(a[end], a[0])
+                            <i>(the heap size is reduced by one)</i>
+                            end ← end - 1
+                            <i>(the swap ruined the heap property, so restore it)</i>
+                            siftDown(a, 0, end)
+                    </pre>
+                    <b>Heapify and shiftDown - </b>
+                    <pre> 
+                    <b>procedure</b> heapify(a,count) is
+                        <i>(end is assigned the index of the first (left) child of the root)</i>
+                        end&nbsp;:= 1
+                        
+                        <b>while</b> end &lt; count
+                            <i>(sift up the node at index end to the proper place such that all nodes above</i>
+                            <i> the end index are in heap order)</i>
+                            siftUp(a, 0, end)
+                            end&nbsp;:= end + 1
+                        <i>(after sifting up the last node all nodes are in heap order)</i>
+                    
+                    <b>procedure</b> siftUp(a, start, end) <b>is</b>
+                        <b>input: </b> <i>start represents the limit of how far up the heap to sift.</i>
+                                      <i>end is the node to sift up.</i>
+                        child&nbsp;:= end 
+                        <b>while</b> child &gt; start
+                            parent&nbsp;:= iParent(child)
+                            <b>if</b> a[parent] &lt; a[child] <b>then</b> <i>(out of max-heap order)</i>
+                                swap(a[parent], a[child])
+                                child&nbsp;:= parent <i>(repeat to continue sifting up the parent now)</i>
+                            <b>else</b>
+                                <b>return</b>
+                   </pre>
+                </code>
+
+            </div>
+
+        </div>
+
+        <!-- for bubble sort -->
+
+        <div id="bubble_sort_info">
+            <h2>Basic Information - </h2>
+            <div class="main_info_div">
+                <h3>Time Complexities - </h3>
+                <div class="container">
+	
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                        </div>
+                        <div class="table-content">	
+                            <div class="table-row">		
+                                <div class="table-data">Best</div>
+                                <div class="table-data">O(n)</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Average</div>
+                                <div class="table-data">O(n^2)</div>
+
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Worst</div>
+                                <div class="table-data">O(n^2)</div>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <h3>Algorithm - </h3>
+                <code>
+                    <pre>
+                    <span></span><span class="k">procedure</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="n">A</span> <span class="o">:</span> <span class="n">list</span> <span class="k">of</span> <span class="n">sortable</span> <span class="n">items</span><span class="p">)</span>
+                        <span class="n">n</span> <span class="o">:=</span> <span class="nb">length</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+                        <span class="k">repeat</span>
+                            <span class="n">swapped</span> <span class="o">:=</span> <span class="k">false</span>
+                            <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">1</span> <span class="k">to</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="n">inclusive</span> <span class="k">do</span>
+                                <span class="o">/*</span> <span class="k">if</span> <span class="n">this</span> <span class="n">pair</span> <span class="k">is</span> <span class="n">out</span> <span class="k">of</span> <span class="n">order</span> <span class="o">*/</span>
+                                <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">then</span>
+                                    <span class="o">/*</span> <span class="nb">swap</span> <span class="n">them</span> <span class="k">and</span> <span class="n">remember</span> <span class="n">something</span> <span class="n">changed</span> <span class="o">*/</span>
+                                    <span class="nb">swap</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">,</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                                    <span class="n">swapped</span> <span class="o">:=</span> <span class="k">true</span>
+                                <span class="k">end</span> <span class="k">if</span>
+                            <span class="k">end</span> <span class="k">for</span>
+                        <span class="k">until</span> <span class="k">not</span> <span class="n">swapped</span>
+                    <span class="k">end</span> <span class="k">procedure</span>
+                    </pre>
+                </code>
+
+            </div>
+
+        </div>
+
         </div>
         
         <script src="js/sorting/generate_new_array.js" type="text/javascript"></script>
