@@ -34,10 +34,11 @@ $("#reset_array").on("click",()=>{
     generateArray()
 });
 $(".sorting_buttons button").on("click",(e)=>{
-    console.log("working")
     const button_text = e.target.innerHTML
     $("#selected_algorithm").text(button_text)
     selected_algo = button_text.toLowerCase()
+    $("#binary_search_info, #simple_search_info").css('display','none')
+    $("#"+selected_algo+"_search_info").css("display","block")
 })
 $("#start_searching").on("click",runSearching)
 $("#stop_searching").on("click",()=>{

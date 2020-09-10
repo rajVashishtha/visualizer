@@ -90,3 +90,6 @@ code pre{
 #bubble_sort_info, #quick_sort_info, #heap_sort_info{
     display: none;
 }
+#binary_search_info{
+    display: none;
+}
