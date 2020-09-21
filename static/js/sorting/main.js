@@ -20,6 +20,21 @@ $("#sorting_speed").jRange({
     snap: true
 })
 generateArray();
+$("#input-parser-btn").on('click',()=>{
+    const string_temp = $("#input-parser-textarea").val().trim().slice(1,-1)
+    console.log(string_temp.split(","))
+    const temp_parsing_array = string_temp.split(",")
+    var real_parsing_array = []
+    for(var i = 0;i<temp_parsing_array.length;i++){
+        if(temp_parsing_array[i].trim() != ""){
+            real_parsing_array.push(parseInt(temp_parsing_array[i]))
+        }
+    }
+    console.log(real_parsing_array)
+    generateArray2(real_parsing_array)
+})
+
+
 $("#array_size").on("change",changeArray)
 $("#reset_array").on("click",resetArray)
 $(".sorting_buttons button").on("click",(e)=>{
