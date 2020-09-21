@@ -66,8 +66,8 @@
     display: block;
 }
 .navbar .sorting_buttons button.disabled_button{
-    color: #888888;
-    border-color: #888888;
+    color: whitesmoke;
+    border-color: whitesmoke;
     cursor: not-allowed;
 }
 .info_div h2, .info_div span,.info_div h3,.info_div h4,.info_div h5{
