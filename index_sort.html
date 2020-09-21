@@ -7,18 +7,18 @@
         <link rel="icon" href="./images/logo.svg"/>
         <link rel="mask-icon" href="./images/logo.svg" />
         <link href="./css/table.css" rel="stylesheet" />
-        <link href="./css/main.css" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="extras/jquery.range.js" type="text/javascript"></script>
         <link href="./extras/jquery.range.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.7/css/uikit.min.css" integrity="sha512-J6C1FhNHlGkRsqXrmDprCi4TAe7S3QXXkClKopWHzeqhVTaFjxlSJoXDcfMVNWL79nf4Yqi7moHYP7bzGTF1gw==" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.7/js/uikit.min.js" integrity="sha512-8qiRasoFXMiNj3lzriKW6BKSPpSgUvv+5spP1TkNs2yf2WY9B263HSkMcCq4Ym2H9VpzzqhcJUvjBjKkzMCFyw==" crossorigin="anonymous"></script>
+        <link href="./css/main.css" rel="stylesheet" />
     </head>
-    <body>
+    <body style="background-color: #504E4E;">
         <div id="my-id" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
                 <h2 class="uk-modal-title" style="margin-top: 0px !important;">Enter Input</h2>
-                <textarea class="uk-textarea" id="input-parser-textarea" rows="4" placeholder="In format - [1, 2, 3, 4, 5, ....so on]"></textarea>
+                <textarea class="uk-textarea" id="input-parser-textarea" rows="4" placeholder="In format - [1, 2, 3, 4, 5, ....so on] and only positive"></textarea>
                 <p class="uk-text-right">
                     <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                     <button class="uk-button uk-button-primary uk-modal-close" type="button" id="input-parser-btn">Done</button>
@@ -70,8 +70,8 @@
 	
                     <div class="table">
                         <div class="table-header">
-                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
-                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                            <div class="header__item">Case</div>
+                            <div class="header__item">Complexities</div>
                         </div>
                         <div class="table-content">	
                             <div class="table-row">		
@@ -148,8 +148,8 @@ end procedure
 	
                     <div class="table">
                         <div class="table-header">
-                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
-                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                            <div class="header__item"><a id="name" class="filter__link" >Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" >Complexities</a></div>
                         </div>
                         <div class="table-content">	
                             <div class="table-row">		
@@ -203,8 +203,8 @@ end procedure
 	
                     <div class="table">
                         <div class="table-header">
-                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
-                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                            <div class="header__item"><a id="name" class="filter__link">Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number">Complexities</a></div>
                         </div>
                         <div class="table-content">	
                             <div class="table-row">		
@@ -284,8 +284,8 @@ end procedure
 	
                     <div class="table">
                         <div class="table-header">
-                            <div class="header__item"><a id="name" class="filter__link" href="#">Case</a></div>
-                            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Complexities</a></div>
+                            <div class="header__item"><a id="name" class="filter__link" >Case</a></div>
+                            <div class="header__item"><a id="wins" class="filter__link filter__link--number">Complexities</a></div>
                         </div>
                         <div class="table-content">	
                             <div class="table-row">		

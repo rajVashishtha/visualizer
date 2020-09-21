@@ -18,12 +18,19 @@ const generateArray2 = (array)=>{
     array_cont.css('flex-direction','row')
     array_cont.html("")
     array_size = array.length
+    const maintain = ((screen.height)/7)
+    console.log(maintain)
     for(var i = 0 ;i<array_size;i++){
-        div_sizes[i] = array[i]
+        if(array[i] > maintain){
+            div_sizes[i] = array[i]%(maintain)
+        }
+        else{
+            div_sizes[i] = array[i]
+        }
         divs[i] = document.createElement("div")
         array_cont.append(divs[i])
         margin_size = 0.2
-        divs[i].style=" margin:0% " + margin_size + "%; background-color:#53AAFc; border-radius:5px; width:" + (100/array_size-(2*margin_size)) + "%; height:" + (div_sizes[i]%70) + "%;";
+        divs[i].style=" margin:0% " + margin_size + "%; background-color:#53AAFc; border-radius:5px; width:" + (100/array_size-(2*margin_size)) + "%; height:" + (div_sizes[i]) + "%;";
     }
 }
 

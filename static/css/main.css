@@ -2,13 +2,14 @@
     top:0px;
     left:0px;
     position: fixed;
-    background-color: whitesmoke;
+    background-color: #5F6060;
     color:#53AAFC;
     width: 100%;
     padding: 20px 10px;
 }
 .navbar h2{
     display: inline;
+    color: white !important;
 }
 .navbar .sorting_buttons{
     display: flex;
@@ -20,11 +21,11 @@
 }
 .navbar .sorting_buttons button{
     padding: 5px 20px;
-    background-color: whitesmoke;
+    background-color: #696A68;
     color:#53AAFC;
-    border: 1px solid #53AAFc;
-    border-radius: 10px;
-    box-shadow: inset 0px 1px 0px rgba(83,170,252,.5);
+    border: 1.5px solid #53AAFC;
+    border-radius: 5px;
+    /* box-shadow: inset 0px 1px 0px rgba(83,170,252,.5); */
     cursor: pointer;
 }
 .navbar .action_buttons{
@@ -37,16 +38,16 @@
 }
 .navbar .action_buttons button{
     padding: 5px 20px;
-    background-color: whitesmoke;
+    background-color: #696A68;
     color:#53AAFC;
     border: 1px solid #53AAFc;
-    border-radius: 10px;
-    box-shadow: inset 0px 1px 0px rgba(83,170,252,.5);
+    border-radius: 5px;
+    /* box-shadow: inset 0px 1px 0px rgba(83,170,252,.5); */
     cursor: pointer;
 }
 .navbar .action_buttons button.disabled_button{
-    color: #888888;
-    border-color: #888888;
+    color: whitesmoke;
+    border-color: whitesmoke;
     cursor: not-allowed;
 }
 .main_body{
@@ -69,17 +70,26 @@
     border-color: #888888;
     cursor: not-allowed;
 }
+.info_div h2, .info_div span,.info_div h3,.info_div h4,.info_div h5{
+    color: white;
+    
+}
 code{
     display: flex;
     flex-direction: column;
     width: 60vw;
     justify-content: center;
     align-items: center;
+    background-color: #605C5C;
+    background: #504E4E !important;
 }
 code pre{
-    padding: 10px 30px;
+    margin-left: 30px;
     padding-right: 350px;
-    background-color: #efefef;
+    background-color: #696A68;;
+    color: white;
+    border: 2px solid #53AAFC;
+    background-clip: padding-box;
 }
 .k{
     font-weight: bold;

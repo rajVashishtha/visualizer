@@ -154,7 +154,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #AAA;
-    background-color: #e7e7e7;
+    background-color: #696A68;
     background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#dddddd));
     background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
@@ -164,14 +164,18 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffdddddd', GradientType=0);
   }
   .theme-blue .back-bar .pointer-label {
-    color: #999;
+    color: white;
+    background-color: #696A68;
   }
   .theme-blue .back-bar .focused {
-    color: #333;
+    color: white;
+    background-color: #696A68;
   }
   .theme-blue .scale span {
-    border-left: 1px solid #e5e5e5;
+    border-left: 1px solid #696A68;
+    background-color: #696A68;
   }
   .theme-blue .scale ins {
-    color: #999;
+    color: white;
+    background-color: #696A68;
   }
