@@ -4,8 +4,8 @@
   "description": "\"Alogorithms Visualizer\"",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
-    "start": "node index.js"
+    "test": "nodemon api/index.js",
+    "start": "node api/index.js"
   },
   "repository": {
     "type": "git",

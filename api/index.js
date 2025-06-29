@@ -4,25 +4,23 @@ const path = require('path');
 
 const app = express();
 
-// Serve static files from the "static" directory
-app.use(express.static(path.join(__dirname, 'static')));
+// Serve static files
+app.use(express.static(path.join(__dirname, '..', 'static')));
 
-// Route: Home
+// Routes
 app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: __dirname });
+  res.sendFile('index.html', { root: path.join(__dirname, '..', 'static') });
 });
 
-// Route: Sort Page
 app.get('/sort', (req, res) => {
-  res.sendFile('index_sort.html', { root: __dirname });
+  res.sendFile('index_sort.html', { root: path.join(__dirname, '..', 'static') });
 });
 
-// Route: Search Page
 app.get('/search', (req, res) => {
-  res.sendFile('index_search.html', { root: __dirname });
+  res.sendFile('index_search.html', { root: path.join(__dirname, '..', 'static') });
 });
 
-// Only listen when running locally (not on Vercel)
+// Local dev
 if (require.main === module) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
@@ -30,6 +28,6 @@ if (require.main === module) {
   });
 }
 
-// Export for Vercel (as serverless function)
+// Export for Vercel
 module.exports = app;
 module.exports.handler = serverless(app);
